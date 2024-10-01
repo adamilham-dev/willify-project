@@ -1,0 +1,2258 @@
+@font-face {
+    font-family: 'Maison Neue Bold';
+    src: url('/assets/fonts/Maison-Neue-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Maison Neue Book';
+    src: url('/assets/fonts/Maison-Neue-Book.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Maison Neue Demi';
+    src: url('/assets/fonts/Maison-Neue-Demi.ttf') format('truetype');
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Maison Neue Book", sans-serif;
+    font-weight: unset;
+    background-color: #0A0A0A;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px;
+}
+
+.navbar-willify{
+    min-height: 80px;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: transparent;
+    transition: all ease-in-out 300ms;
+    z-index: 1000;
+}
+@media only screen and (min-width: 481px) {
+    .navbar-willify{
+        min-height: 100px;
+        padding: 0px 48px;
+    }
+}
+.navbar-willify.navbar-scrolled{
+    min-height: 80px;
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 48%, rgba(29,29,29,1) 100%);;
+    transition: all ease-in-out 300ms;
+}
+@media only screen and (min-width: 481px) {
+    .navbar-willify.navbar-scrolled{
+        min-height: 70px;
+    }
+}
+
+.navbar-willify .nav-logo img{
+    width: 94px;
+    height: 28px;
+}
+@media only screen and (min-width: 481px) {
+    .navbar-willify .nav-logo img{
+        width: 121px;
+        height: 36px;
+    }
+}
+
+.navbar-willify .nav-items{
+    display: none;
+    flex-direction: row;
+    column-gap: 16px;
+}
+@media only screen and (min-width: 481px) {
+    .navbar-willify .nav-items{
+        display: flex;
+    }
+}
+
+.navbar-willify .nav-items .btn{
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+    transition: all ease-in-out 100ms;
+}
+.navbar-willify .nav-items .btn:hover{
+    transition: all ease-in-out 100ms;
+    color: #121212;
+    background-color: #FFFFFF !important;
+}
+.navbar-willify .nav-items .btn.btn-auth-signup{
+    background-color: #FFFFFF29;
+}
+
+.navbar-willify .btn-toggle{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+@media only screen and (min-width: 481px) {
+    .navbar-willify .btn-toggle{
+        display: none;
+     }
+}
+
+.offcanvas {
+
+    /* z-index: 3000; */
+    background-color: transparent;
+    transition: all 200ms ease-in-out;
+}
+
+.offcanvas.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 200ms ease-in-out;
+    background-color: rgba(10, 10, 10, 0.5);
+    z-index: 3000;
+}
+
+.offcanvas-wrapper {
+    position: fixed;
+    top: 0;
+    left: -330px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: all 200ms ease-in-out;
+    background-color: #0A0A0A;
+}
+.offcanvas-wrapper .offcanvas-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 74px;
+}
+.offcanvas-wrapper .offcanvas-header img{
+    width: 94px;
+    height: 28px;
+}
+.offcanvas-wrapper .offcanvas-body{
+    padding: 16px 0px;
+}
+.offcanvas-wrapper .offcanvas-body .menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.offcanvas-wrapper .offcanvas-body .menu .btn{
+     padding: 10px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+    transition: all ease-in-out 100ms;
+    width: fit-content;
+}
+.offcanvas-wrapper .offcanvas-body .menu .btn:hover{
+    transition: all ease-in-out 100ms;
+    color: #121212;
+    background-color: #FFFFFF !important;
+}
+.offcanvas-wrapper .offcanvas-body .menu .btn.btn-auth-signup{
+    background-color: #FFFFFF29;
+}
+
+.offcanvas-wrapper .offcanvas-header .offcanvas-close{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.offcanvas.show .offcanvas-wrapper {
+    left: 0;
+    transition: all 200ms ease-in-out;
+}
+
+header{
+    background-image: url('/assets/images/Background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 60px;
+}
+@media only screen and (min-width: 481px) {
+    header{
+        padding-bottom: 100px;
+    }
+}
+
+header.hero{
+    padding-top: 120px;
+}
+header.hero .hero-top{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 48px;
+        align-items: center;
+    }
+}
+
+header.hero .hero-top .hero-left{
+    padding-left: 16px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-left{
+        padding-left: 100px;
+    }
+}
+
+header.hero .hero-top .hero-left h1{
+    font-size: 32px;
+    line-height: 44px;
+    font-family: "Maison Neue Demi", sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-left h1{
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+header.hero .hero-top .hero-left p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #E8E8E8;
+    margin-bottom: 32px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-left p{
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 36px;
+    }
+}
+header.hero .hero-top .hero-left .hero-action{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+}
+header.hero .hero-top .hero-left .hero-action .btn-explore{
+    font-size: 12px;
+    font-family: "Maison Neue Demi", sans-serif;
+    line-height: 20px;
+    text-align: left;
+    padding: 8px 12px;
+    background-color: #F7C84F;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all ease-in-out 100ms;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-left .hero-action .btn-explore{
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 20px;
+    }
+}
+
+header.hero .hero-top .hero-left .hero-action .btn-explore:hover{
+    background-color: #f0b726;
+    transition: all ease-in-out 100ms;
+}
+
+header.hero .hero-top .hero-left .hero-action .btn-learn{
+    font-size: 12px;
+    font-family: "Maison Neue Demi", sans-serif;
+    line-height: 20px;
+    text-align: left;
+    padding: 8px 12px;
+    background-color: #FFFFFF3D;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-left .hero-action .btn-learn{
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 20px;
+    }
+}
+
+header.hero .hero-top .hero-left .hero-action .btn-learn:hover{
+    background-color: #FFFFFF;
+    color: #121212;
+    transition: all ease-in-out 100ms;
+}
+
+header.hero .hero-top .hero-right img.illustration-mobile{
+    width: 100%;
+}
+header.hero .hero-top .hero-right img.illustration-desktop{
+    width: 100%;
+    display: none;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-right img.illustration-mobile{
+        width: 100%;
+        display: none;
+    }
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-top .hero-right img.illustration-desktop{
+        width: 100%;
+        display: block;
+    }
+}
+
+header.hero .hero-integrated{
+    padding-left: 16px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-integrated{
+        padding-left: 100px;
+    }
+}
+header.hero .hero-integrated p{
+    color: #E8E8E8;
+    margin-bottom: 16px;
+    line-height: 20px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-integrated p{
+        margin-bottom: 18px;
+        line-height: 26px;
+    }
+}
+header.hero .hero-integrated .logos{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+}
+header.hero .hero-integrated .logos .logo img{
+    width: 80px;
+    height: 40px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero .hero-integrated .logos .logo img{
+        width: 120px;
+        height: 60px;
+    }
+}
+
+section#features{
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 60px;
+}
+@media only screen and (min-width: 481px) {
+    section#features{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-bottom: 80px;
+    }
+}
+
+section#features .features-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+}
+@media only screen and (min-width: 481px) {
+    section#features .features-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 60px;
+    }
+}
+section#features .features-wrapper .item{
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+    background-color: #141414;
+}
+section#features .features-wrapper .item img{
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+}
+@media only screen and (min-width: 481px) {
+    section#features .features-wrapper .item img{
+        height: 320px;
+    }
+}
+section#features .features-wrapper .item .item-content{
+    background-color: #141414;
+    height: 140px;
+    padding: 16px;
+    margin: 0px;
+}
+@media only screen and (min-width: 481px) {
+    section#features .features-wrapper .item .item-content{
+        height: 200px;
+        padding: 32px;
+    }
+}
+section#features .features-wrapper .item .item-content h5.item-title{
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Maison Neue Demi", sans-serif;
+    margin-bottom: 16px;
+}
+@media only screen and (min-width: 481px) {
+    section#features .features-wrapper .item .item-content h5.item-title{
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+section#features .features-wrapper .item .item-content p.item-text{
+    color: #C2C2C2;
+    font-size: 14px;
+    line-height: 20px;
+}
+@media only screen and (min-width: 481px) {
+    section#features .features-wrapper .item .item-content p.item-text{
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+section.section-songs{
+    padding-left: 16px;
+    padding-right: 16;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs{
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+    }
+}
+section.section-songs .views-all{
+    display: flex;
+    justify-content: space-between;
+}
+section.section-songs .views-all h3{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .views-all h3{
+        font-size: 32px;
+    }
+}
+section.section-songs .views-all .view-all-action-desktop{
+    display: none;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .views-all .view-all-action-desktop{
+        display: flex;
+        flex-direction: row;
+        column-gap: 16px;
+        align-items: center;
+    }
+}
+section.section-songs .views-all .view-all-action-desktop .btn-view-all{
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #FFFFFF3D;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+
+section.section-songs .views-all .view-all-action-desktop .btn-view-all:hover{
+    background-color: #FFFFFF;
+    color: #121212;
+    transition: all ease-in-out 100ms;
+}
+
+section.section-songs .views-all .view-all-action-desktop .arrows{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    align-items: center;
+}
+section.section-songs .views-all .view-all-action-desktop .arrows .btn-arrow-left{
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin: 0px;
+    border-radius: 50%;
+    border: solid 1px #404040;
+    color: #404040;
+    font-size: 20px;
+    line-height: 0px;
+    background-color: transparent;
+    transition: all ease-in-out 100ms;
+}
+section.section-songs .views-all .view-all-action-desktop .arrows .btn-arrow-left svg{
+    position: absolute;
+    top: 50%;
+     right: 50%;
+     transform: translate(50%, -50%);
+}
+section.section-songs .views-all .view-all-action-desktop .arrows .btn-arrow-left:hover{
+    border: solid 1px #FFFFFF;
+    color: #0A0A0A;
+    background-color: #FFFFFF;
+    transition: all ease-in-out 100ms;
+}
+section.section-songs .views-all .view-all-action-desktop .arrows .btn-arrow-right{
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin: 0px;
+    border-radius: 50%;
+    border: solid 1px #FFFFFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 0px;
+    background-color: transparent;
+    transition: all ease-in-out 100ms;
+}
+
+section.section-songs .views-all .view-all-action-desktop .arrows .btn-arrow-right svg{
+    position: absolute;
+    top: 50%;
+     right: 50%;
+     transform: translate(50%, -50%);
+}
+section.section-songs .views-all .view-all-action-desktop .arrows .btn-arrow-right:hover{
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+    transition: all ease-in-out 100ms;
+}
+section.section-songs .songs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .songs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 24px;
+        column-gap: 48px;
+    }
+}
+section.section-songs .songs .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section.section-songs .songs .item .song{
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    align-items: center;
+    text-decoration: none;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .songs .item .song{
+        column-gap: 16px;
+        align-items: center;
+    }
+}
+section.section-songs .songs .item .thumbnail{
+    position: relative;
+}
+section.section-songs .songs .item .thumbnail img.song-img{
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    }
+@media only screen and (min-width: 481px) {
+    section.section-songs .songs .item .thumbnail img.song-img{
+        width: 80px;
+        height: 80px;
+        border-radius: 0px;
+    }
+}
+section.section-songs .songs .item .thumbnail .thumbnail-overlay{
+    background-color: #0A0A0A;
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all ease-in-out 200ms;
+}
+section.section-songs .songs .item .thumbnail .play{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    transition: all ease-in-out 200ms;
+}
+section.section-songs .songs .item .song .song-title{
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .songs .item .song .song-title{
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+section.section-songs .songs .item .song .song-information{
+    color: #C2C2C2;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    font-size: 14px;
+    line-height: 20px;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .songs .item .song .song-information{
+        column-gap: 6px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+section.section-songs .songs .item .song-action{
+    display: none;
+    flex-direction: row;
+    column-gap: 24px;
+    transition: all ease-in-out 200ms;
+}
+section.section-songs .songs .item:hover .song-action{
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    transition: all ease-in-out 200ms;
+}
+section.section-songs .songs .item:hover .song-title{
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+section.section-songs .songs .item:hover .song-information{
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+section.section-songs .songs .item:hover .thumbnail .thumbnail-overlay{
+    display: block;
+    transition: all ease-in-out 200ms;
+}
+section.section-songs .songs .item:hover .thumbnail .play{
+    display: block;
+    transition: all ease-in-out 200ms;
+}
+section.section-songs .songs .item:hover .song-content{
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media only screen and (min-width: 481px) {
+    section.section-songs .songs .item:hover .song-content{
+        white-space: unset;
+        width: unset;
+        overflow: unset;
+        text-overflow: unset;
+    }
+
+}
+
+
+header.hero-best-song{
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 48%, rgba(29,29,29,1) 100%);
+    padding-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+}
+
+header.hero-best-song .wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+
+header.hero-best-song .wrapper .thumbnail{
+    text-align: center;
+}
+
+header.hero-best-song .wrapper img.best-song{
+    width: 240px;
+    height: 240px;
+    border-radius: 16px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song{
+        padding-top: 120px;
+        padding-bottom: 36px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+header.hero-best-song .wrapper .breadcrumb-search{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+header.hero-best-song .wrapper .breadcrumb-search .breadcrumb{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0px;
+    border-radius: 50%;
+    color: #404040;
+    font-size: 20px;
+    line-height: 0px;
+    background-color: rgba(255, 255, 255, 0.12);
+    transition: all ease-in-out 100ms;
+    text-decoration: none;
+}
+header.hero-best-song .wrapper .breadcrumb-search .breadcrumb svg{
+   position: absolute;
+   top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+header.hero-best-song .wrapper .breadcrumb-search .breadcrumb:hover{
+    color: #0A0A0A;
+    background-color: #FFFFFF;
+    transition: all ease-in-out 100ms;
+}
+header.hero-best-song .wrapper .breadcrumb-search .search{
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+}
+header.hero-best-song .wrapper .breadcrumb-search .search-song{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #D9D9D9;
+    font-size: 14px;
+    line-height: 20px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .breadcrumb-search{
+        display: none;
+    }
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper{
+        display: flex;
+        flex-direction: row;
+        column-gap: 48px;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper img.best-song{
+        width: 280px;
+        height: 280px;
+        border-radius: 16px;
+    }
+}
+header.hero-best-song .wrapper .information{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .information{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
+header.hero-best-song .wrapper .information h3{
+    font-size: 24px;
+    font-family: "Maison Neue Demi", sans-serif;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .information h3{
+        font-size: 48px;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+}
+header.hero-best-song .wrapper .information p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #E8E8E8;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .information p{
+        font-size: 18px;
+        line-height: 26px;
+        color: #E8E8E8;
+    }
+}
+header.hero-best-song .wrapper .information .song-count{
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .information .song-count{
+        display: flex;
+        flex-direction: row;
+        column-gap: 16px;
+    }
+}
+header.hero-best-song .wrapper .information .song-count img.mini-logo{
+    height: 24px;
+    width: 24px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .information .song-count img.mini-logo{
+        height: 28px;
+        width: 28px;
+    }
+}
+header.hero-best-song .wrapper .information .song-count div{
+    font-size: 14px;
+    line-height: 20px;
+    color: #E8E8E8;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-best-song .wrapper .information .song-count div{
+        font-size: 18px;
+        line-height: 26px;
+        color: #E8E8E8;
+    }
+}
+
+section.songs{
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+@media only screen and (min-width: 481px) {
+    section.songs{
+        padding: 24px 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}
+section.songs .action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section.songs .action .action-play{
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    align-items: center;
+}
+section.songs .action .action-play .btn-play{
+    padding: 10px 16px;
+    background-color: #F7C84F;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .action .action-play .btn-play{
+        padding: 8px 12px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+section.songs .action .search{
+    display: none;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .action .search{
+        padding: 10px 16px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.16);
+        border-radius: 8px;
+        width: 240px;
+    }
+}
+section.songs .action .search .search-song{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #D9D9D9;
+    font-size: 16px;
+    line-height: 24px;
+}
+section.songs .table-song{
+    color: #C4C4C4;
+    padding: 0px;
+    margin: 0px;
+    border-spacing: 0px;
+}
+section.songs .table-song thead{
+    color: #C4C4C4;
+    font-size: 18px;
+    line-height: 26px;
+    display: none;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .table-song thead{
+        color: #C4C4C4;
+        font-size: 18px;
+        line-height: 26px;
+        display: table-header-group;
+    }
+}
+
+section.songs .table-song thead th{
+    border-bottom: 1px solid #404040;
+}
+section.songs .table-song thead th.number{
+    padding: 16px;
+    width: 40px;
+    text-align: center;
+}
+section.songs .table-song thead th.title{
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .table-song thead th.title{
+        width: 460px;
+    }
+}
+section.songs .table-song thead th.album{
+    padding: 16px;
+    width: 212px;
+    text-align: left;
+}
+section.songs .table-song thead th.time{
+    text-align: center;
+    padding: 16px;
+    width: 212px;
+}
+section.songs .table-song thead th.plays{
+    padding: 16px;
+    width: 212px;
+    text-align: center;
+}
+section.songs .table-song tbody td{
+    display: none;
+    padding: 16px 0px !important;
+    }
+@media only screen and (min-width: 481px) {
+    section.songs .table-song tbody td{
+        display: table-cell;
+        padding: 20px !important;
+    }
+}
+section.songs .table-song tbody td.number{
+    padding: 20px;
+    width: 40px;
+    text-align: center;
+}
+section.songs .table-song tbody td.title{
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .table-song tbody td.title{
+        width: 460px;
+    }
+}
+section.songs .table-song tbody td.title img{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+section.songs .table-song tbody td.title .song-information h6{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Maison Neue Demi", sans-serif;
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .table-song tbody td.title .song-information h6{
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+section.songs .table-song tbody td.title .song-information p{
+    font-size: 14px;
+    line-height: 20px;
+}
+@media only screen and (min-width: 481px) {
+    section.songs .table-song tbody td.title .song-information p{
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+section.songs .table-song tbody td.album{
+    padding: 20px;
+    width: 212px;
+    text-align: left;
+    font-family: "Maison Neue Demi", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+section.songs .table-song tbody td.time{
+    text-align: center;
+    padding: 16px;
+    width: 212px;
+    font-family: "Maison Neue Demi", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+section.songs .table-song tbody td.plays{
+    padding: 20px;
+    width: 212px;
+    text-align: center;
+    font-family: "Maison Neue Demi", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+header.hero-about{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    align-items: center;
+    justify-content: center;
+    }
+@media only screen and (min-width: 481px) {
+    header.hero-about{
+        padding-top: 160px;
+        padding-bottom: 60px;
+        padding-left: 100px;
+        padding-right: 100px;
+        row-gap: 48px;
+    }
+
+}
+header.hero-about .wrapper-about{
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-about .wrapper-about{
+        row-gap: 48px;
+        max-width: 720px;
+    }
+
+}
+header.hero-about .wrapper-about h1{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Maison Neue Demi';
+    font-size: 24px;
+    line-height: 32px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-about .wrapper-about h1{
+        text-align: center;
+        color: #FFFFFF;
+        font-family: 'Maison Neue Demi';
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+}
+header.hero-about .wrapper-about p{
+    text-align: center;
+    color: #E8E8E8;
+    font-family: 'Maison Neue Book';
+    font-size: 14px;
+    line-height: 20px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-about .wrapper-about p{
+        text-align: center;
+        color: #E8E8E8;
+        font-family: 'Maison Neue Book';
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+}
+
+section.how{
+    padding-top: 24px;
+    padding-bottom: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+section.how h3{
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Maison Neue Demi';
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 481px) {
+    section.how h3{
+        text-align: center;
+        font-size: 28px;
+        line-height: 36px;
+        font-family: 'Maison Neue Demi';
+        color: #FFFFFF;
+    }
+
+}
+section.how .explains{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 48px;
+    row-gap: 48px;
+}
+@media only screen and (min-width: 481px) {
+    section.how .explains{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 48px;
+        align-items: start;
+    }
+}
+section.how .explains .explain-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how .explains .explain-item{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+section.how .explains .explain-item img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+section.how .explains .explain-item h5{
+    font-family: 'Maison Neue Demi';
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how .explains .explain-item h5{
+        font-family: 'Maison Neue Demi';
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+}
+section.how .explains .explain-item p{
+    font-family: 'Maison Neue Book';
+    font-size: 14px;
+    line-height: 20px;
+    color: #E8E8E8;
+    text-align: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how .explains .explain-item p{
+        font-family: 'Maison Neue Book';
+        font-size: 18px;
+        line-height: 26px;
+        color: #E8E8E8;
+        text-align: center;
+    }
+
+}
+
+section.how-work{
+    padding-top: 24px;
+    padding-bottom: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+section.how-work h3{
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Maison Neue Demi';
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work h3{
+        text-align: center;
+        font-size: 28px;
+        line-height: 36px;
+        font-family: 'Maison Neue Demi';
+        color: #FFFFFF;
+    }
+
+}
+section.how-work p.subtitle{
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Maison Neue Book';
+    color: #E8E8E8;
+    max-width: 800px;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work p.subtitle{
+        text-align: center;
+        font-size: 18px;
+        line-height: 26px;
+        font-family: 'Maison Neue Book';
+        color: #E8E8E8;
+        max-width: 800px;
+    }
+
+}
+section.how-work .works{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work .works{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 48px;
+        align-items: start;
+    }
+}
+section.how-work .works .work-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work .works .work-item{
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+section.how-work .works .work-item img{
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work .works .work-item img{
+        width: 100%;
+        height: 360px;
+        border-radius: 8px;
+    }
+
+}
+section.how-work .works .work-item p{
+    font-family: 'Maison Neue Book';
+    font-size: 14px;
+    line-height: 20px;
+    color: #E8E8E8;
+    text-align: center;
+}
+@media only screen and (min-width: 481px) {
+    section.how-work .works .work-item p{
+        font-family: 'Maison Neue Book';
+        font-size: 18px;
+        line-height: 26px;
+        color: #E8E8E8;
+        text-align: center;
+    }
+}
+
+header.hero-auth{
+    padding-top: 120px;
+    padding-bottom: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-auth{
+        padding-top: 120px;
+        padding-bottom: 60px;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+}
+header.hero-auth .wrapper-auth{
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-auth .wrapper-auth{
+        max-width: 360px;
+    }
+}
+header.hero-auth .wrapper-auth h3{
+    font-family: 'Maison Neue Demi';
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: center;
+}
+header.hero-auth .wrapper-auth .form-auth{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+header.hero-auth .wrapper-auth .password{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    align-items: center;
+}
+header.hero-auth .wrapper-auth .password small{
+    color: #C2C2C2;
+    padding: 0px 16px;
+    font-size: 14px;
+}
+/* header.hero-auth .wrapper-auth .input{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    } */
+header.hero-auth .wrapper-auth .input-auth{
+    border-radius: 8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.16);
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: #D9D9D9;
+    font-size: 16px;
+    line-height: 24px;
+}
+header.hero-auth .wrapper-auth select.input-auth{
+    border-radius: 8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.16);
+    padding: 12.5px 16px !important;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: #D9D9D9;
+    font-size: 16px;
+    line-height: 24px;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-auth .wrapper-auth .input-auth{
+        width: 100%;
+    }
+}
+header.hero-auth .wrapper-auth .btn-submit{
+    width: 100%;
+}
+header.hero-auth .wrapper-auth .btn-submit{
+    border: none;
+    cursor: pointer;
+    font-family: "Maison Neue Demi", sans-serif;
+    text-align: center;
+    background-color: #F7C84F;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all ease-in-out 100ms;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+header.hero-auth .wrapper-auth .btn-submit:hover{
+    background-color: #f0b726;
+    transition: all ease-in-out 100ms;
+}
+
+header.hero-song-detail{
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 48%, rgba(29,29,29,1) 100%);
+    padding-top: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-song-detail{
+        background: rgb(10,10,10);
+        background: linear-gradient(90deg, rgba(10,10,10,1) 48%, rgba(29,29,29,1) 100%);
+        padding-top: 120px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 36px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 48px;
+        align-items: center;
+    }
+
+}
+header.hero-song-detail img.song-thumbnail{
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+}
+header.hero-song-detail .song-information{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-song-detail .song-information{
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+    }
+}
+header.hero-song-detail .song-information .song-detail{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+header.hero-song-detail .song-information .song-detail h3{
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-song-detail .song-information .song-detail h3{
+        font-size: 36px;
+        line-height: 44px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+        text-align: left;
+    }
+}
+header.hero-song-detail .song-information .song-detail p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Book", sans-serif;
+    text-align: center;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-song-detail .song-information .song-detail p{
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Book", sans-serif;
+        text-align: left;
+    }
+
+}
+header.hero-song-detail .song-information .song-detail span{
+    font-size: 14px;
+    line-height: 20px;
+    color: #C2C2C2;
+    font-family: "Maison Neue Book", sans-serif;
+    text-align: center;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-song-detail .song-information .song-detail span{
+        font-size: 18px;
+        line-height: 26px;
+        color: #C2C2C2;
+        font-family: "Maison Neue Book", sans-serif;
+        text-align: left;
+    }
+
+}
+header.hero-song-detail .song-information .song-play{
+    font-family: "Maison Neue Demi", sans-serif;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: #F7C84F;
+    border-radius: 8px;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 20px;
+    color: #121212;
+    transition: all ease-in-out 100ms;
+}
+@media only screen and (min-width: 481px) {
+    header.hero-song-detail .song-information .song-play{
+        font-family: "Maison Neue Demi", sans-serif;
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #F7C84F;
+        border-radius: 8px;
+        width: fit-content;
+        font-size: 16px;
+        line-height: 26px;
+        color: #121212;
+        transition: all ease-in-out 100ms;
+    }
+
+}
+header.hero-song-detail .song-information .song-play:hover{
+    background-color: #f0b726;
+    transition: all ease-in-out 100ms;
+}
+
+section.song-detail-body{
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 80px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body{
+        padding-top: 36px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 80px;
+    }
+}
+section.song-detail-body .wrapper-body{
+    display: block;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        column-gap: 60px;
+    }
+}
+section.tabs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.tabs .tab{
+    padding: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    font-family: "Maison Neue Demi", sans-serif;
+    color: #D9D9D9;
+    cursor: pointer;
+}
+section.tabs .tab.tab-active{
+    border-bottom: 1px solid #F7C84F;
+    color: #F7C84F;
+}
+section.tabs .tab:hover{
+    border-bottom: 1px solid #F7C84F;
+    color: #F7C84F;
+}
+section.song-detail-body .wrapper-body .body-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .music-video{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .music-video{
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .music-video h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .music-video h5{
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .music-video .video{
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .featured-in{
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .featured-in h5{
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in .albums{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .featured-in .albums{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 24px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album img{
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album .album-detail{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album .album-detail p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #D9D9D9;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album .album-detail p{
+        font-size: 18px;
+        line-height: 26px;
+        color: #D9D9D9;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album .album-detail h6{
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .featured-in .albums .album .album-detail h6{
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .top-song{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .top-song{
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .top-song h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .top-song h5{
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .top-song .wrapper-songs{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .top-song .wrapper-songs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 48px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .top-song .songs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+section.song-detail-body .wrapper-body .body-detail .top-song .songs .song{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    align-items: center;
+}
+section.song-detail-body .wrapper-body .body-detail .top-song .songs .song img{
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .top-song .songs .song img{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .top-song .songs .song p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .top-song .songs .song p{
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .top-song .songs .song span{
+    font-size: 18px;
+    line-height: 26px;
+    color: #C2C2C2;
+    font-family: "Maison Neue Book", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .top-song .songs .song span{
+        font-size: 14px;
+        line-height: 20px;
+        color: #C2C2C2;
+        font-family: "Maison Neue Book", sans-serif;
+    }
+
+}
+
+section.song-detail-body .wrapper-body .body-detail .credits{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits{
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits h5{
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits{
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items h6{
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items h6{
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 16px;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 48px;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col{
+   display: flex;
+   flex-direction: row;
+   column-gap: 12px;
+   align-items: center;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col{
+       display: flex;
+       flex-direction: row;
+       column-gap: 16px;
+       align-items: center;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col img{
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col img{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col p{
+        font-size: 20px;
+        line-height: 28px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+    }
+}
+section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col span{
+    font-size: 14px;
+    line-height: 20px;
+    color: #C2C2C2;
+    font-family: "Maison Neue Book", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-detail .credits .wrapper-credits .credit-items .row .col span{
+        font-size: 18px;
+        line-height: 26px;
+        color: #C2C2C2;
+        font-family: "Maison Neue Book", sans-serif;
+    }
+
+}
+
+
+section.song-detail-body .wrapper-body .body-detail .music-video .video iframe{
+    width: 100%;
+    height: 100%;
+}
+section.song-detail-body .wrapper-body .body-lyric{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    display: none;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-lyric{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+}
+section.song-detail-body .wrapper-body .body-lyric h5{
+    font-size: 28px;
+    line-height: 36px;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+    display: none;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-lyric h5{
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-family: "Maison Neue Demi", sans-serif;
+        display: block;
+    }
+}
+section.song-detail-body .wrapper-body .body-lyric p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #E8E8E8;
+    font-family: "Maison Neue Book", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    section.song-detail-body .wrapper-body .body-lyric p{
+        font-size: 18px;
+        line-height: 26px;
+        color: #E8E8E8;
+        font-family: "Maison Neue Book", sans-serif;
+    }
+}
+
+
+
+
+
+footer {
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 48%, rgba(29,29,29,1) 100%);
+    padding: 36px 16px;
+}
+@media only screen and (min-width: 481px) {
+    footer {
+        padding: 80px 100px;
+    }
+}
+footer .footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+footer .footer-wrapper .footer-primary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 48px;
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+footer .footer-wrapper .footer-primary .logos{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+footer .footer-wrapper .footer-primary .logos .logo{
+    width: 106px;
+    height: 32px;
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary .logos .logo{
+        width: 150px;
+        height: 46px;
+    }
+}
+footer .footer-wrapper .footer-primary .logos .sosmeds{
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+}
+footer .footer-wrapper .footer-primary .logos .sosmed{
+    width: 24px;
+    height: 24px;
+}
+footer .footer-wrapper .footer-primary .menus{
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+}
+footer .footer-wrapper .footer-primary .menus .menu-1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    width: 140px;
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary .menus .menu-1{
+        row-gap: 24px;
+        width: 276px;
+    }
+}
+footer .footer-wrapper .footer-primary .menus .menu-1 a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Maison Neue Demi", sans-serif;
+
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary .menus .menu-1 a{
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+footer .footer-wrapper .footer-primary .menus .menu-2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 140px;
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary .menus .menu-2{
+        row-gap: 24px;
+        width: 276px;
+    }
+}
+footer .footer-wrapper .footer-primary .menus .menu-2 a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Maison Neue Demi", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary .menus .menu-2 a{
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+footer .footer-wrapper .footer-primary .menus .menu-2 a.btn-auth-signup{
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Maison Neue Demi", sans-serif;
+    transition: all ease-in-out 100ms;
+    background-color: #FFFFFF29;
+    width: fit-content;
+}
+@media only screen and (min-width: 481px) {
+    footer .footer-wrapper .footer-primary .menus .menu-2 a.btn-auth-signup{
+        padding: 10px 16px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+footer .footer-wrapper .footer-primary .menus .menu-2 a.btn-auth-signup:hover{
+    transition: all ease-in-out 100ms;
+    color: #121212;
+    background-color: #FFFFFF !important;
+}
+footer .footer-wrapper .footer-copyright{
+    color: #C4C4C4;
+}

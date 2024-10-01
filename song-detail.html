@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav id="navbar-willify" class="navbar-willify">
+        <a href="/index.html" class="nav-logo">
+            <img src="/assets/images/logo.png" alt="logo-willify">
+        </a>
+        <div class="nav-items">
+            <a href="/register.html" class="btn btn-auth-signup">Sign up</a>
+            <a href="/login.html" class="btn btn-auth-login">Login</a>
+        </div>
+        <button type="button" id="btn-offcanvas" class="btn-toggle"><svg width="18" height="12" viewBox="0 0 18 12"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 0.75H17.25M0.75 6H17.25M0.75 11.25H17.25" stroke="white" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </nav>
+    <div id="offcanvas" class="offcanvas">
+        <div class="offcanvas-wrapper">
+            <div class="offcanvas-header">
+                <img src="/assets/images/logo.png" alt="offcanvas-logo">
+                <button class="offcanvas-close" id="btnoffcanvasclose"><svg width="15" height="13" viewBox="0 0 15 13"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 12L14 1M1.00001 1L14 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="menu">
+                    <a href="/register.html" class="btn btn-auth-signup">Sign Up</a>
+                    <a href="/login.html" class="btn btn-auth-login">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-song-detail">
+        <img src="/assets/images/music3.png" class="song-thumbnail" alt="music3">
+        <div class="song-information">
+            <div class="song-detail">
+                <h3>we can’t be friends (wait for your love)</h3>
+                <p>Ariana Grande</p>
+                <span>Pop • 1,9m times played</span>
+            </div>
+            <a href="" class="song-play">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C17.5116 2 22 6.48625 22 12.0058C22 17.5137 17.5116 22 12 22C6.48842 22 2 17.5137 2 12.0058C2 6.48625 6.48842 2 12 2ZM10.861 8.02991C10.6486 8.02991 10.4459 8.07815 10.2529 8.17463C10.0116 8.3097 9.81853 8.52195 9.71236 8.77279C9.64479 8.94645 9.53861 9.46744 9.53861 9.47709C9.43243 10.0463 9.37452 10.9725 9.37452 11.9952C9.37452 12.9706 9.43243 13.8572 9.51931 14.4361C9.52896 14.4457 9.63514 15.0921 9.75097 15.314C9.96332 15.7192 10.3784 15.9701 10.8224 15.9701H10.861C11.1506 15.9604 11.7587 15.7096 11.7587 15.7C12.7819 15.2754 14.7992 13.9537 15.61 13.0757L15.668 13.0178C15.7741 12.9117 15.9093 12.7477 15.9382 12.7091C16.0927 12.5065 16.1699 12.2557 16.1699 12.0058C16.1699 11.725 16.083 11.4645 15.9189 11.2523C15.8803 11.2137 15.7355 11.0497 15.6004 10.9146C14.8089 10.0656 12.7432 8.67631 11.6622 8.25181C11.4981 8.18524 11.083 8.03956 10.861 8.02991Z"
+                        fill="#0A0A0A" />
+                </svg>
+                Play Full Song • 4:09</a>
+        </div>
+    </header>
+
+    <section class="tabs">
+        <button class="tab tab-active">Overview</button>
+        <button class="tab">Lyrics</button>
+    </section>
+
+    <section class="song-detail-body">
+        <div class="wrapper-body">
+            <div class="body-detail">
+                <div class="music-video">
+                    <h5>Music Video</h5>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/KNtJGQkC-WI?si=bBjfVMlg94lnz1D5"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="featured-in">
+                    <h5>Featured in</h5>
+                    <div class="albums">
+                        <div class="album">
+                            <img src="/assets/images/music3.png" alt="music3">
+                            <div class="album-detail">
+                                <p>Album</p>
+                                <h6>eternal sunshine</h6>
+                            </div>
+                        </div>
+                        <div class="album">
+                            <img src="/assets/images/music3.png" alt="music3">
+                            <div class="album-detail">
+                                <p>Album</p>
+                                <h6>eternal sunshine</h6>
+                            </div>
+                        </div>
+                        <div class="album">
+                            <img src="/assets/images/music3.png" alt="music3">
+                            <div class="album-detail">
+                                <p>Album</p>
+                                <h6>eternal sunshine</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-song">
+                    <h5>Top Songs by Ariana Grande</h5>
+                    <div class="wrapper-songs">
+                        <div class="songs">
+                            <div class="song">
+                                <img src="/assets/images/music3.png" alt="music3">
+                                <div>
+                                    <p>we can’t be friends (wait f...</p>
+                                    <span>Ariana Grande</span>
+                                </div>
+                            </div>
+                            <div class="song">
+                                <img src="/assets/images/music3.png" alt="music3">
+                                <div>
+                                    <p>we can’t be friends (wait f...</p>
+                                    <span>Ariana Grande</span>
+                                </div>
+                            </div>
+                            <div class="song">
+                                <img src="/assets/images/music3.png" alt="music3">
+                                <div>
+                                    <p>we can’t be friends (wait f...</p>
+                                    <span>Ariana Grande</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="songs">
+                            <div class="song">
+                                <img src="/assets/images/music3.png" alt="music3">
+                                <div>
+                                    <p>we can’t be friends (wait f...</p>
+                                    <span>Ariana Grande</span>
+                                </div>
+                            </div>
+                            <div class="song">
+                                <img src="/assets/images/music3.png" alt="music3">
+                                <div>
+                                    <p>we can’t be friends (wait f...</p>
+                                    <span>Ariana Grande</span>
+                                </div>
+                            </div>
+                            <div class="song">
+                                <img src="/assets/images/music3.png" alt="music3">
+                                <div>
+                                    <p>we can’t be friends (wait f...</p>
+                                    <span>Ariana Grande</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="credits">
+                    <h5>Credits</h5>
+                    <div class="wrapper-credits">
+                        <div class="credit-items">
+                            <h6>Performing Artist</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credit-items">
+                            <h6>Composition & Lyrics</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credit-items">
+                            <h6>Production & Engineering</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <img src="/assets/images/vocals.png" alt="">
+                                    <div>
+                                        <p>Ariana Grande</p>
+                                        <span>Background vocals</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-lyric">
+                <h5>Lyrics</h5>
+                <p>I didn't think you'd understand me<br>
+                    How could you ever even try?<br>
+                    I don't wanna tiptoe, but I don't wanna hide<br>
+                    But I don't wanna feed this monstrous fire<br>
+                    Just wanna let this story die<br>
+                    And I'll be alright<br>
+                    <br>
+                    We can't be friends<br>
+                    But I'd like to just pretend<br>
+                    You cling to your papers and pens<br>
+                    Wait until you like me again<br>
+                    <br>
+                    Wait for your love<br>
+                    Love, I'll wait for your love<br>
+                    <br>
+                    Me and my truth, we sit in silence<br>
+                    Baby girl, it's just me and you<br>
+                    'Cause I don't wanna argue, but I don't wanna bite<br>
+                    My tongue, yeah, I think I'd rather die<br>
+                    You got me misunderstood, but at least I look this good<br>
+                    <br>
+                    We can't be friends<br>
+                    But I'd like to just pretend<br>
+                    You cling to your papers and pens<br>
+                    Wait until you like me again<br>
+                    <br>
+                    Wait for your love<br>
+                    Love, I'll wait for your love<br>
+                    I'll wait for your love<br>
+                    Love, I'll wait for your love<br>
+                    <br>
+                    Know that you made me<br>
+                    I don't like how you paint me, yet I'm still here hanging<br>
+                    Not what you made me<br>
+                    It's something like a daydream<br>
+                    But I feel so seen in the night<br>
+                    So for now, it's only me<br>
+                    And maybe that's all I need<br>
+                    <br>
+                    We can't be friends<br>
+                    But I'd like to just pretend<br>
+                    You cling to your papers and pens<br>
+                    Wait until you like me again<br>
+                    <br>
+                    Wait for your love<br>
+                    Love, I'll wait for your love<br>
+                    I'll wait for your love<br>
+                    Love, I'll wait for your love<br>
+                    <br>
+                    I'll wait for your love<br>
+                    I'll wait for your love<br>
+                    I'll wait for your love<br>
+                    I'll wait for your love<br>
+                    I'll wait for your love
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-primary">
+                <div class="footer-item">
+                    <div class="logos">
+                        <img src="/assets/images/logo.png" class="logo" alt="logo">
+                        <div class="sosmeds">
+                            <div class="sosmed"><img src="/assets/images/footer-sosial-tiktok.svg" alt=""></div>
+                            <div class="sosmed"><img src="/assets/images/footer-sosial-ig.svg" alt=""></div>
+                            <div class="sosmed"><img src="/assets/images/footer-sosial-fb.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="menus">
+                        <div class="menu-1">
+                            <a href="">About us</a>
+                            <a href="">FAQ</a>
+                            <a href="">Help Center</a>
+                        </div>
+                        <div class="menu-2">
+                            <a href="">Contact us</a>
+                            <a href="/register.html" class="btn-auth-signup">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                Copyright 2024 by Willify
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
